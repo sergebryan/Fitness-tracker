@@ -89,7 +89,7 @@ app.get("/exercise", (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'exercise.html'));
 });
 
-const port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
 app.listen(port, function () {
   console.log(`app listening at: http://localhost:${port}`);
