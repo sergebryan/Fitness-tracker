@@ -78,19 +78,19 @@ app.put("/api/workouts/:id", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 app.get("/stats", (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'stats.html'));
+  res.sendFile(path.join(__dirname, 'public/stats.html'));
 });
 
 app.get("/exercise", (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'exercise.html'));
+  res.sendFile(path.join(__dirname, 'public/exercise.html'));
 });
 
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
-app.listen(port, function () {
-  console.log(`app listening at: http://localhost:${port}`);
+app.listen(PORT, function () {
+  console.log(`app listening at: http://localhost:${PORT}`);
 });
