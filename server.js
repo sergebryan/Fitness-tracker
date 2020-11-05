@@ -2,10 +2,10 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
-
+require ("dotenv").config();
 const db = require("./models");
 
-mongoose.connect("mongodb://localhost/workout", {
+mongoose.connect(process.env.dblink || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
